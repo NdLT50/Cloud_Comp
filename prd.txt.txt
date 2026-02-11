@@ -1,0 +1,8 @@
+Implement a Python class called UserService for user registration.
+
+Business Requirements:
+1. The service must create a user with fields: email and password.
+2. Email must be validated to contain "@".
+3. Password must be at least 8 characters long.
+4. Passwords must NOT be stored in plain text (hashing required).
+5. The service must raise a ValueError if validation fails.
