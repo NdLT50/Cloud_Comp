@@ -1,0 +1,32 @@
+{
+"compliance_score": 40,
+"status": "FAIL",
+"audit_log": [
+{
+"requirement": "The service must create a user with fields: email and password.",
+"met": true,
+"comment": "The method correctly constructs and returns a dictionary containing email and password keys."
+},
+{
+"requirement": "Email must be validated to contain '@'.",
+"met": true,
+"comment": "Logic exists to verify the presence of the '@' character in the email string."
+},
+{
+"requirement": "Password must be at least 8 characters long.",
+"met": true,
+"comment": "Logic exists to check if the password length is less than 8 characters."
+},
+{
+"requirement": "Passwords must NOT be stored in plain text (hashing required).",
+"met": false,
+"comment": "The implementation stores the raw password string directly in the dictionary without any hashing (e.g., bcrypt, argon2)."
+},
+{
+"requirement": "The service must raise a ValueError if validation fails.",
+"met": false,
+"comment": "The implementation returns 'None' upon validation failure instead of raising the required 'ValueError' exception."
+}
+],
+"security_check": "Unsafe"
+}
